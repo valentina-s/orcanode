@@ -19,10 +19,11 @@ jobs:
         # aws-region: us-east-2
       - uses: actions/checkout@v3
       - name: start containers
-        with: 
-           AWSACCESSKEYID: ${{ secrets.AWSACCESSKEYID }}
-           AWSSECRETACCESSKEY: ${{ secrets.AWSSECRETACCESSKEY }}
+        env: 
+          AWSACCESSKEYID: ${{ secrets.AWSACCESSKEYID }}
+          AWSSECRETACCESSKEY: ${{ secrets.AWSSECRETACCESSKEY }}
         run: cd mseed/ && docker-compose up --build
+
        
       - name: clean up containers
         run: docker-compose down
