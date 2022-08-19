@@ -22,8 +22,10 @@ services:
       # REPO_SECRET: ${{ secrets.REPO_SECRET }}
       # - ENV_SECRET = ${{ secrets.ENV_SECRET }} 
       # - REPO_SECRET = ${{ secrets.REPO_SECRET }}
-      AWSACCESSKEYID: ${{ AWSACCESSKEYID }}
-      AWSSECRETACCESSKEY: ${{ AWSSECRETACCESSKEY }}  
+      - AWSACCESSKEYID = ${{ AWSACCESSKEYID }}
+      - AWSSECRETACCESSKEY = ${{ AWSSECRETACCESSKEY }}  
+      # AWSACCESSKEYID: ${{ AWSACCESSKEYID }}
+      # AWSSECRETACCESSKEY: ${{ AWSSECRETACCESSKEY }}  
 #    env_file: .env
     volumes:
       - data:/tmp
