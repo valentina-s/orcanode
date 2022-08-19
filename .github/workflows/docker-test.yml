@@ -22,7 +22,7 @@ jobs:
         env: 
           AWSACCESSKEYID: ${{ secrets.AWSACCESSKEYID }}
           AWSSECRETACCESSKEY: ${{ secrets.AWSSECRETACCESSKEY }}
-        run: cd mseed/ && docker-compose up --build
+        run: docker-compose --version && cd mseed/ && docker-compose up --build
 
        
       - name: clean up containers
