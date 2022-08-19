@@ -20,7 +20,7 @@ services:
     environment:
       - AWSACCESSKEYID=${AWSACCESSKEYID}
       - AWSSECRETACCESSKEY=${AWSSECRETACCESSKEY}  
-      - NODE_NAME=${NODE_NAME} 
+      - NODE_NAME=karan_test 
       - REGION=${REGION}
 #    env_file: .env
     volumes:
